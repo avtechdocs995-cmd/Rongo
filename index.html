@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10294b">
+<title>Rongo University Connect Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#10294b;--blue:#2463eb;--sky:#eaf2ff;--ink:#17243a;--muted:#718096;--line:#e7edf5;--green:#0b9b69;--bg:#f6f8fc}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:"DM Sans",sans-serif;color:var(--ink)}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.top{height:70px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(5%,calc((100% - 1180px)/2));position:sticky;top:0;z-index:5}.brand{font:800 17px Manrope;color:var(--navy);display:flex;align-items:center;gap:10px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#2463eb,#6b8fff);display:grid;place-items:center;color:white;font-weight:900}.navlinks{display:flex;gap:22px;align-items:center}.navlinks a{color:#536177;text-decoration:none;font-size:14px;font-weight:600}.btn{padding:12px 18px;border-radius:12px;background:var(--blue);color:white;font-weight:700}.btn.alt{background:#edf3ff;color:#2458c5}.btn.dark{background:var(--navy)}.btn.small{padding:9px 13px;font-size:13px}.wrap{max-width:1180px;margin:auto;padding:0 22px}.hero{margin:26px auto 42px;max-width:1180px;min-height:410px;border-radius:28px;overflow:hidden;background:linear-gradient(90deg,rgba(8,27,54,.96),rgba(8,27,54,.77),rgba(8,27,54,.15)),url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center;padding:55px;color:white}.hero-content{max-width:570px}.eyebrow{color:#a9c6ff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font:800 clamp(36px,5vw,58px)/1.08 Manrope;margin:15px 0}.hero p{font-size:17px;line-height:1.7;color:#e3ebf8}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hero .btn.alt{background:#fff;color:var(--navy)}.section{padding:24px 0 42px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:20px}.section h2{font:800 26px Manrope;margin:0 0 6px}.muted{color:var(--muted)}.categories,.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.cat,.stat,.panel,.listing{background:white;border:1px solid var(--line);border-radius:18px;padding:19px}.cat .ico{font-size:25px}.cat h3{margin:10px 0 4px;font-size:15px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{border-radius:20px;overflow:hidden;background:white;border:1px solid var(--line)}.feature img{width:100%;height:160px;object-fit:cover}.feature div{padding:18px}.feature h3{margin:0 0 7px}.footer{background:var(--navy);color:#dbe6f8;padding:35px 22px;margin-top:35px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.hidden{display:none!important}.app{max-width:1180px;margin:24px auto;padding:0 20px}.apphead{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.appgrid{display:grid;grid-template-columns:235px 1fr;gap:18px}.sidebar{background:var(--navy);color:white;border-radius:20px;padding:18px;height:max-content;position:sticky;top:90px}.sidebar button{width:100%;text-align:left;padding:12px;border-radius:10px;background:transparent;color:#d9e6fa;margin:3px 0}.sidebar button.active,.sidebar button:hover{background:#29466c;color:white}.content{min-width:0}.stats{grid-template-columns:repeat(3,1fr);margin-bottom:18px}.stat strong{font-size:25px;display:block;color:var(--navy)}.stat span{font-size:13px;color:var(--muted)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.toolbar input,.toolbar select,.field input,.field textarea,.field select{width:100%;border:1px solid #dce4ef;border-radius:11px;padding:12px;background:#fff;outline:none}.toolbar input{flex:1;min-width:180px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.listing{padding:0;overflow:hidden}.listing img{width:100%;height:160px;object-fit:cover;background:#edf2f8}.listing-body{padding:15px}.listing h3{font-size:16px;margin:0 0 7px}.price{color:var(--green);font-weight:800}.tag{display:inline-block;background:#edf3ff;color:#2858b8;border-radius:30px;padding:5px 9px;font-size:11px;font-weight:700;margin:3px 4px 3px 0}.field{margin:12px 0}.field label{font-size:13px;font-weight:700;display:block;margin-bottom:6px}.modal{position:fixed;inset:0;background:#07172dcc;display:grid;place-items:center;padding:18px;z-index:20}.modalbox{width:min(540px,100%);max-height:92vh;overflow:auto;background:white;border-radius:20px;padding:24px}.modalbox h2{margin-top:0;font-family:Manrope}.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}.notice{padding:12px 14px;border-radius:12px;background:#edf5ff;color:#214d92;font-size:13px;margin:12px 0}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#122b4c;color:white;padding:13px 18px;border-radius:12px;z-index:40;box-shadow:0 8px 30px #0003}.empty{text-align:center;padding:35px;color:var(--muted);background:white;border:1px dashed #ccd6e4;border-radius:16px}.profileline{display:flex;align-items:center;gap:10px}.avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;background:#e8eef8}@media(max-width:800px){.navlinks a:not(.keep){display:none}.hero{margin:12px 12px 25px;padding:30px 24px;min-height:390px}.categories{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.appgrid{grid-template-columns:1fr}.sidebar{position:static;display:flex;overflow:auto;gap:5px;padding:9px}.sidebar button{white-space:nowrap;width:auto}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.cards{grid-template-columns:1fr}.top{padding:0 14px}.brand{font-size:14px}.hero h1{font-size:38px}.section h2{font-size:22px}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand"><span class="logo">RH</span><span>RONGO UNIVERSITY<br><small style="font-size:10px;color:#718096;letter-spacing:1.2px">CONNECT HUB</small></span></div><nav class="navlinks"><a href="#overview">Home</a><a href="#overview">Overview</a><a href="#services">Services</a><a href="#market">Marketplace</a><a href="#notes">Academic Notes</a></nav><div id="topAuth"><button class="btn alt small" onclick="openLogin()">Login</button> <button class="btn small" onclick="openRegister()">Join · KSh 50</button> <button class="btn dark small" onclick="openAdmin()">Admin</button></div><div id="topUser" class="hidden"><button class="btn alt small" onclick="openAdmin()">Admin</button> <button class="btn small" onclick="showApp()">My Dashboard</button></div></header>
+<main id="publicPage">
+<section class="hero" id="overview"><div class="hero-content"><div class="eyebrow">The student-powered campus community</div><h1>Your Campus.<br>Your Marketplace.<br>Your Opportunity.</h1><p>Discover student services, access academic resources, buy and sell secondhand items, and connect with talented students around Rongo University.</p><div class="hero-actions"><button class="btn" onclick="browse('all')">Explore Marketplace</button><button class="btn alt" onclick="openRegister()">Join Connect Hub · KSh 50</button></div></div></section>
+<div class="wrap">
+<section class="section" id="services"><div class="section-head"><div><h2>What can you find on campus?</h2><div class="muted">A smarter way to find the help, skills and products you need.</div></div></div><div class="categories">
+<div class="cat"><div class="ico">🧺</div><h3>Laundry & Washing</h3><div class="muted">Convenient student services</div></div><div class="cat"><div class="ico">📚</div><h3>Academic Support</h3><div class="muted">Tutoring and study help</div></div><div class="cat"><div class="ico">💻</div><h3>Digital Services</h3><div class="muted">Design, printing and tech</div></div><div class="cat"><div class="ico">🛍️</div><h3>Secondhand Goods</h3><div class="muted">Buy and sell affordably</div></div></div></section>
+<section class="section" id="market"><div class="section-head"><div><h2>Explore campus listings</h2><div class="muted">Browse public listings. Pay only when you want to contact a seller.</div></div><button class="btn alt small" onclick="browse('all')">View all</button></div><div class="toolbar" style="margin-bottom:14px">
+<input id="publicSearch" placeholder="Search services, items, notes or requests…" oninput="renderPublic()" aria-label="Search campus listings">
+<select id="publicSort" onchange="renderPublic()" style="max-width:190px"><option value="new">Newest first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+</div>
+<div class="toolbar" style="margin-bottom:16px">
+<button class="btn small" onclick="browse('all')">All listings</button>
+<button class="btn alt small" onclick="browse('service')">Services</button>
+<button class="btn alt small" onclick="browse('product')">Items for sale</button>
+<button class="btn alt small" onclick="browse('note')">Academic notes</button>
+<button class="btn alt small" onclick="browse('request')">Student requests</button>
+</div>
+<div id="publicListings" class="cards"><div class="empty">Loading live campus listings…</div></div></section>
+<section class="section" id="notes"><div class="section-head"><div><h2>Learn and share together</h2><div class="muted">Discover course notes, revision guides and learning resources.</div></div></div><div class="features"><article class="feature"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80"><div><h3>Study resources</h3><p class="muted">Find helpful notes and revision materials shared by students.</p></div></article><article class="feature"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'"><div><h3>Peer learning</h3><p class="muted">Connect with classmates and support one another.</p></div></article><article class="feature"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"><div><h3>Student enterprise</h3><p class="muted">Turn your skills and creativity into opportunities.</p></div></article></div></section>
+<section class="section"><div class="panel" style="background:linear-gradient(120deg,#10294b,#2459a5);color:white;padding:28px"><h2 style="color:white">Ready to connect?</h2><p style="color:#dbe8ff">Register once for KSh 50, then log in from your devices to discover and share campus opportunities.</p><button class="btn" style="background:white;color:#17345d" onclick="openRegister()">Register now</button></div></section>
+</div><footer class="footer"><div class="footer-inner"><div><b>RONGO UNIVERSITY CONNECT HUB</b><p>Connect. Share. Offer Services. Earn.</p></div><div>Student-powered marketplace · Kenya<br><small>Use the platform responsibly and respect other students.</small></div></div></footer>
+</main>
+<main id="appPage" class="app hidden"><div class="apphead"><div><div class="eyebrow" style="color:#2463eb">STUDENT SPACE</div><h2 style="margin:5px 0" id="welcome">Dashboard</h2></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn alt small" onclick="goHome()">⌂ Home</button><button class="btn alt small" onclick="view('dashboard')">Dashboard</button><button class="btn small" onclick="logout()">Logout</button></div></div><div class="appgrid"><aside class="sidebar" id="sidebar"><button onclick="goHome()">⌂ Home</button><button class="active" data-view="dashboard" onclick="view('dashboard',this)">▦ Dashboard</button><button data-view="services" onclick="view('services',this)">✦ Find Services</button><button data-view="products" onclick="view('products',this)">◇ Secondhand Items</button><button data-view="notes" onclick="view('notes',this)">▤ Academic Notes</button><button data-view="post" onclick="view('post',this)">＋ Post / Request</button><button data-view="mine" onclick="view('mine',this)">▣ My Listings</button><button data-view="profile" onclick="view('profile',this)">◎ My Profile</button><button data-view="payments" onclick="view('payments',this)">◷ Payments</button></aside><section class="content" id="appContent"></section></div></main>
+<div id="modal" class="modal hidden" onclick="if(event.target===this)closeModal()"><div class="modalbox" id="modalBox"></div></div><div id="toast" class="toast hidden"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://js.paystack.co/v2/inline.js"></script>
+<script type="module">
+// Replace these with Supabase Project Settings > API values.
+const SUPABASE_URL="https://tkvwudiyjstuxtiusgoq.supabase.co";
+const SUPABASE_ANON_KEY="sb_publishable_36gDE37-icSjf1qLe912PA_8MS47QZM";
+const PAYSTACK_PUBLIC_KEY="pk_live_36a8e192249a7c8ffda09a9e071bfeccf3279451";
+const PAYSTACK_CURRENCY="KES";
+if(!window.supabase || !window.supabase.createClient){
+  document.addEventListener("DOMContentLoaded",()=>{const t=document.getElementById("toast");if(t){t.textContent="Supabase library did not load. Check your internet connection and refresh.";t.classList.remove("hidden");}});
+  throw new Error("Supabase JavaScript library failed to load.");
+}
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const auth=supabaseClient.auth,db={},storage={};
+const ref=(_d,path)=>({path:String(path).replace(/^\/+|\/+$/g,"")});
+const snap=x=>({exists:()=>x!==null&&x!==undefined,val:()=>x});
+const listingOut=x=>({id:x.id,type:x.type,title:x.title,category:x.category,description:x.description,price:x.price,location:x.location,imageUrl:x.image_url,attachmentUrl:x.attachment_url,attachmentName:x.attachment_name,ownerId:x.owner_id,ownerName:x.owner_name,createdAt:new Date(x.created_at).getTime(),status:x.status});
+const listingIn=x=>({type:x.type,title:x.title,category:x.category,description:x.description,price:Number(x.price)||0,location:x.location,image_url:x.imageUrl||null,attachment_url:x.attachmentUrl||null,attachment_name:x.attachmentName||null,owner_id:x.ownerId,owner_name:x.ownerName,status:x.status||"pending"});
+async function get(r){const p=r.path.split("/");
+ if(p[0]==="users"){const {data,error}=await supabaseClient.from("profiles").select("*").eq("id",p[1]).maybeSingle();if(error)throw error;return snap(data?{name:data.name,hostel:data.hostel,room:data.room,course:data.course,year:data.year,phone:data.phone,email:data.email,status:data.status,role:data.role}:null)}
+ if(p[0]==="listings"){let q=supabaseClient.from("listings").select("*");if(p[1])q=q.eq("id",p[1]);const {data,error}=await q;if(error)throw error;if(p[1])return snap(data[0]?listingOut(data[0]):null);const o={};(data||[]).forEach(x=>o[x.id]=listingOut(x));return snap(o)}
+ if(p[0]==="privateContacts"){const {data,error}=await supabaseClient.from("private_contacts").select("*").eq("listing_id",p[1]).maybeSingle();if(error)throw error;return snap(data?{phone:data.phone,ownerId:data.owner_id}:null)}
+ if(p[0]==="contactUnlocks"){const {data,error}=await supabaseClient.from("contact_unlocks").select("id").eq("user_id",p[1]).eq("listing_id",p[2]).maybeSingle();if(error)throw error;return snap(data?true:null)}
+ if(p[0]==="payments"){const {data,error}=await supabaseClient.from("payments").select("*").eq("user_id",p[1]);if(error)throw error;const o={};(data||[]).forEach(x=>o[x.id]={type:x.type,amount:x.amount,status:x.status});return snap(o)}
+ return snap(null)}
+async function set(r,v){const p=r.path.split("/");
+ if(p[0]==="users"){const {error}=await supabaseClient.from("profiles").upsert({id:p[1],name:v.name,hostel:v.hostel,room:v.room,course:v.course,year:v.year,phone:v.phone,email:v.email,status:v.status||"pending_payment",registration_fee:50,currency:"KES"});if(error)throw error;return}
+ if(p[0]==="listings"){const {error}=await supabaseClient.from("listings").insert({id:p[1],...listingIn(v)});if(error)throw error;return}
+ if(p[0]==="privateContacts"){const {error}=await supabaseClient.from("private_contacts").upsert({listing_id:p[1],phone:v.phone,owner_id:v.ownerId});if(error)throw error;return}
+ throw Error("Unsupported Supabase write "+r.path)}
+function push(r){const id=crypto.randomUUID();return {path:r.path+"/"+id,key:id}}
+async function update(r,v){const p=r.path.split("/");const row={};if(v.status)row.status=v.status;if(v.approvedAt)row.approved_at=new Date(v.approvedAt).toISOString();const {error}=await supabaseClient.from("listings").update(row).eq("id",p[1]);if(error)throw error}
+function onValue(r,cb,errcb){let stop=false;const refresh=async()=>{try{const x=await get(r);if(!stop)cb(x)}catch(e){errcb?.(e)}};refresh();const ch=supabaseClient.channel("listing-changes").on("postgres_changes",{event:"*",schema:"public",table:"listings"},refresh).subscribe();return()=>{stop=true;supabaseClient.removeChannel(ch)}}
+function storageRef(_s,path){return {path}}
+async function uploadBytes(r,file,opts={}){const {data,error}=await supabaseClient.storage.from("listing-uploads").upload(r.path,file,{contentType:opts.contentType||file.type});if(error)throw error;return {ref:{path:data.path}}}
+async function getDownloadURL(r){return supabaseClient.storage.from("listing-uploads").getPublicUrl(r.path).data.publicUrl}
+async function createUserWithEmailAndPassword(_a,email,password){const {data,error}=await auth.signUp({email,password});if(error)throw error;return {user:data.user}}
+async function signInWithEmailAndPassword(_a,email,password){const {data,error}=await auth.signInWithPassword({email,password});if(error)throw error;return {user:data.user}}
+async function signOut(){const {error}=await auth.signOut();if(error)throw error}
+async function updateProfile(_u,p){const {error}=await auth.updateUser({data:{display_name:p.displayName}});if(error)throw error}
+function onAuthStateChanged(_a,cb){
+  let live=true,first=true;
+  const {data}=auth.onAuthStateChange((_e,session)=>{
+    if(!live)return;
+    first=false;
+    Promise.resolve().then(()=>{if(live)cb(session?.user||null)});
+  });
+  auth.getSession().then(({data:sessionData,error})=>{
+    if(!live||!first)return;
+    if(error){console.error("Supabase session error",error);return;}
+    cb(sessionData.session?.user||null);
+  }).catch(e=>console.error("Could not read Supabase session",e));
+  return()=>{live=false;data.subscription.unsubscribe()};
+}
+let currentUser=null,allListings=[],activeFilter="all",pendingAction=null,listingsUnsubscribe=null,adminMode=false,pendingRegistration=null;
+const $=id=>document.getElementById(id);
+function toast(s){$("toast").textContent=s;$("toast").classList.remove("hidden");setTimeout(()=>$("toast").classList.add("hidden"),3500)}
+function modal(html){$("modalBox").innerHTML=html;$("modal").classList.remove("hidden")}
+window.closeModal=()=>{$("modal").classList.add("hidden")};
+window.openLogin=()=>modal(`<h2>Welcome back</h2><p class="muted">Log in to your registered account from any device.</p><form id="loginForm"><div class="field"><label>Email address</label><input name="email" type="email" required autocomplete="email"></div><div class="field"><label>Password</label><input name="password" type="password" required autocomplete="current-password"></div><button class="btn" style="width:100%">Login</button></form><p class="muted">Not registered yet? <a href="#" onclick="openRegister();return false">Create an account · KSh 50</a></p>`);
+window.openRegister=()=>modal(`<h2>Join Connect Hub</h2><p class="muted">One-time account registration fee · <b>KSh 50</b></p><form id="registerForm">
+<div class="field"><label>Full name</label><input name="name" required maxlength="90"></div>
+<div class="field"><label>Hostel</label><input name="hostel" required maxlength="100" placeholder="e.g. QM Hostel"></div>
+<div class="field"><label>Room number</label><input name="room" required maxlength="30" placeholder="e.g. B12"></div>
+<div class="field"><label>Course</label><input name="course" required></div>
+<div class="field"><label>Year of study</label><select name="year"><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4</option><option>Year 5</option><option>Other</option></select></div>
+<div class="field"><label>Phone number</label><input name="phone" required type="tel" placeholder="07XXXXXXXX"></div>
+<div class="field"><label>Email address (used to log in)</label><input name="email" type="email" required autocomplete="email"></div>
+<div class="field"><label>Create password (at least 8 characters)</label><input name="password" type="password" minlength="8" required autocomplete="new-password"></div>
+<div class="notice">Create your account, then complete the KSh 50 Paystack registration payment. Once activated, you can log in on other devices.</div>
+<button class="btn" style="width:100%">Create account & Pay KSh 50</button></form>`);
+window.resumeRegistrationPayment=()=>startPayment("registration",50);
+window.openAdmin=()=>modal(`<h2>Administrator login</h2><p class="muted">Use your Supabase administrator account.</p><form id="adminForm"><div class="field"><label>Email</label><input name="email" type="email" required></div><div class="field"><label>Password</label><input name="password" type="password" required></div><button class="btn" style="width:100%">Open admin dashboard</button></form><p class="notice">Set this account's role to admin in the Supabase profiles table.</p>`);
+document.addEventListener("submit",async e=>{
+  if(e.target.id==="loginForm"){
+    e.preventDefault();const f=new FormData(e.target);
+    try{await signInWithEmailAndPassword(auth,f.get("email").trim(),f.get("password"));closeModal();}
+    catch(err){toast("Login failed: "+(err.message||err))}
+  }
+
+  if(e.target.id==="registerForm"){
+    e.preventDefault();
+    const f=new FormData(e.target),data=Object.fromEntries(f);
+    try{
+      const cred=await createUserWithEmailAndPassword(auth,data.email.trim(),data.password);
+      currentUser=cred.user;
+      await updateProfile(cred.user,{displayName:data.name});
+      await set(ref(db,"users/"+cred.user.id),{
+        name:data.name,hostel:data.hostel,room:data.room,course:data.course,year:data.year,
+        phone:data.phone,email:data.email.trim(),status:"pending_payment",
+        createdAt:Date.now(),registrationFee:50,currency:"KES"
+      });
+      closeModal();
+      await startPayment("registration",50,{email:data.email.trim()});
+    }catch(err){console.error(err);toast("Account creation failed: "+(err.message||err))}
+  }
+  if(e.target.id==="adminForm"){
+    e.preventDefault();let f=new FormData(e.target);
+    try{await signInWithEmailAndPassword(auth,String(f.get("email")).trim(),String(f.get("password")));const {data:u}=await auth.getUser();const {data:p,error}=await supabaseClient.from("profiles").select("role").eq("id",u.user.id).single();if(error)throw error;if(p.role!=="admin")throw Error("This account is not an administrator.");adminMode=true;closeModal();showAdmin()}catch(err){toast("Admin login failed: "+err.message)}
+  }
+  if(e.target.id==="listingForm"){e.preventDefault();await saveListing(e.target)}
+});
+function makeReference(){return "RONGO"+Date.now()+Math.random().toString(36).slice(2,9).toUpperCase()}
+async function startPayment(type,amount,extra={}){
+  if(!currentUser){openLogin();return}
+  if(!window.PaystackPop){toast("Paystack checkout did not load. Check your internet and refresh.");return}
+  try{
+    const profileSnap=await get(ref(db,"users/"+currentUser.id));
+    const profile=profileSnap.exists()?profileSnap.val():{};
+    const payerEmail=String(extra.email||profile.email||currentUser.email||"").trim();
+    if(!payerEmail)throw Error("A valid email address is required for Paystack.");
+    const expectedAmount=type==="registration"?50:type==="contact"?10:0;
+    if(!expectedAmount || Number(amount)!==expectedAmount)throw Error("Invalid payment amount.");
+    if(type==="contact" && !extra.listingId)throw Error("Missing listing reference.");
+    const reference=makeReference();
+    const custom_fields=[
+      {display_name:"Payment type",variable_name:"payment_type",value:type},
+      {display_name:"Supabase user",variable_name:"supabase_uid",value:currentUser.id}
+    ];
+    if(type==="contact")custom_fields.push({display_name:"Listing ID",variable_name:"listing_id",value:String(extra.listingId)});
+    const popup=new window.PaystackPop();
+    popup.newTransaction({
+      key:PAYSTACK_PUBLIC_KEY,email:payerEmail,currency:PAYSTACK_CURRENCY,
+      amount:Math.round(expectedAmount*100),reference,
+      metadata:{custom_fields},
+      onSuccess:async response=>{
+        try{
+          if(!response || !response.reference)throw Error("Paystack did not return a transaction reference.");
+          // Pass the active Supabase session explicitly to the Edge Function.
+          const {data:sessionData,error:sessionError}=await auth.getSession();
+          if(sessionError)throw sessionError;
+          const accessToken=sessionData?.session?.access_token;
+          if(!accessToken)throw Error("Your login session is missing. Please sign in again before paying.");
+          const {data:result,error:verifyError}=await supabaseClient.functions.invoke("verify-paystack",{
+            body:{reference:response.reference,type,listingId:extra.listingId||null},
+            headers:{Authorization:"Bearer "+accessToken}
+          });
+          if(verifyError){
+            let detail=verifyError.message||"Payment verification request failed.";
+            try{
+              const responseBody=verifyError.context && await verifyError.context.json();
+              if(responseBody?.error)detail=responseBody.error;
+              else if(responseBody?.message)detail=responseBody.message;
+            }catch(_){}
+            throw Error(detail);
+          }
+          if(!result || result.success!==true)throw Error(result?.error||result?.message||"Payment could not be verified. Your account has NOT been activated.");
+          if(type==="registration"){
+            toast("Payment verified. Your account is now active.");
+            closeModal();showApp();
+          }else if(type==="contact"){
+            const c=await get(ref(db,"privateContacts/"+extra.listingId));
+            if(!c.exists())throw Error("Payment verified, but seller contact is unavailable. Contact the administrator.");
+            openContact(c.val().phone,extra.channel||"call");
+          }
+        }catch(err){console.error(err);toast(err.message||"Payment verification failed. Please contact support with your Paystack reference.");}
+      },
+      onCancel:()=>toast("Payment cancelled. No account activation was made."),
+      onError:error=>{console.error("Paystack error",error);toast("Paystack error: "+(error?.message||"Checkout failed"))}
+    });
+  }catch(err){console.error(err);toast("Could not start payment: "+err.message)}
+}
+onAuthStateChanged(auth,async u=>{
+  currentUser=u;
+  if(u){
+    $("topAuth").classList.add("hidden");$("topUser").classList.remove("hidden");
+    try{
+      const s=await get(ref(db,"users/"+u.id));
+      if(s.exists()&&s.val().status==="active"){
+        showApp();
+      }else if(s.exists()){
+        $("publicPage").classList.remove("hidden");$("appPage").classList.add("hidden");
+        modal(`<h2>Complete your registration</h2><p class="muted">Your account exists, but the KSh 50 registration payment is still pending.</p><div class="panel"><b>KSh 50 · One-time registration</b><p class="muted">Complete payment to activate your account and start posting listings.</p></div><div class="modal-actions"><button class="btn alt" onclick="logout()">Sign out</button><button class="btn" onclick="resumeRegistrationPayment()">Pay KSh 50</button></div>`);
+      }else{
+        $("publicPage").classList.remove("hidden");$("appPage").classList.add("hidden");
+      }
+    }catch(e){console.error(e);toast("Supabase account read failed: "+(e.code||e.message)+" — check your Supabase table permissions and project URL.")}
+  }else{
+    $("topAuth").classList.remove("hidden");$("topUser").classList.add("hidden");
+    $("publicPage").classList.remove("hidden");$("appPage").classList.add("hidden");
+  }
+});
+window.showAdmin=async()=>{if(!adminMode)return;$("publicPage").classList.add("hidden");$("appPage").classList.remove("hidden");$("welcome").textContent="Administrator";let snap=await get(ref(db,"listings"));let items=snap.exists()?Object.entries(snap.val()).map(([id,x])=>({id,...x})):[];$("sidebar").innerHTML='<button class="active" onclick="showAdmin()">Admin listings</button><button onclick="adminLogout()">Exit admin</button>';const rows=items.map(x=>{const status=esc(x.status||"pending"),title=esc(x.title||""),description=esc(x.description||""),owner=esc(x.ownerName||""),category=esc(x.category||"");const action=x.status!=="approved"?'<button class="btn small" onclick="approveListing(\''+x.id+'\')">Approve listing</button>':'<span class="price">Published</span>';return '<div class="panel" style="margin-bottom:12px"><span class="tag">'+status+'</span><h3>'+title+'</h3><p>'+description+'</p><p class="muted">'+owner+' · '+category+'</p>'+action+'</div>'}).join("");$("appContent").innerHTML='<h2>Manage student listings</h2><p class="muted">Approve posts before they appear publicly.</p>'+(rows||'<div class="empty">No listings submitted yet.</div>')};
+window.approveListing=async id=>{if(!adminMode)return;await update(ref(db,"listings/"+id),{status:"approved",approvedAt:Date.now()});toast("Listing approved");showAdmin()};window.adminLogout=()=>{adminMode=false;$("appPage").classList.add("hidden");$("publicPage").classList.remove("hidden");$("topAuth").classList.toggle("hidden",!!currentUser);$("topUser").classList.toggle("hidden",!currentUser);loadListings()};
+window.logout=async()=>{await signOut();currentUser=null;$("appPage").classList.add("hidden");$("publicPage").classList.remove("hidden");$("topAuth").classList.remove("hidden");$("topUser").classList.add("hidden");toast("Signed out on this device")};
+function esc(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function loadListings(){try{if(listingsUnsubscribe){listingsUnsubscribe();listingsUnsubscribe=null}listingsUnsubscribe=onValue(ref(db,"listings"),s=>{allListings=s.exists()?Object.entries(s.val()).map(([id,v])=>({id,...v})).filter(x=>x.status==="approved").sort((a,b)=>(b.createdAt||0)-(a.createdAt||0)):[];renderPublic();if(currentUser&&!adminMode&&!$("appPage").classList.contains("hidden")){let active=document.querySelector(".sidebar button.active");renderView(active?.dataset.view||"dashboard")}},e=>{console.error(e);toast("Could not load live listings: "+e.message)})}catch(e){console.error(e)}}
+function card(x){
+  const isRequest=x.type==="request";
+  const label=isRequest?"STUDENT NEED":(x.category||x.type||"Listing");
+  const action=isRequest?"Respond · KSh 10":"Contact · KSh 10";
+  return `<article class="listing"><img src="${esc(x.imageUrl||"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80")}" onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80'"><div class="listing-body"><span class="tag">${esc(label)}</span><h3>${esc(x.title||"")}</h3><div class="price">${isRequest?"Looking for: ":((+x.price>0)?"KSh "+esc(x.price):"Free resource")}</div><p class="muted">${esc((x.description||"").slice(0,125))}</p><p class="muted">📍 ${esc(x.location||"Rongo University")}</p>${x.attachmentUrl?`<p><a href="${esc(x.attachmentUrl)}" target="_blank" rel="noopener">View attachment</a></p>`:""}<button class="btn small" onclick="contactSeller('${x.id}','call')">${action}</button></div></article>`;
+}
+function renderPublic(){
+  const q=($("publicSearch")?.value||"").toLowerCase().trim();
+  let arr=allListings.filter(x=>(activeFilter==="all"||x.type===activeFilter)&&
+    (String(x.title||"")+" "+String(x.description||"")+" "+String(x.category||"")+" "+String(x.location||"")).toLowerCase().includes(q));
+  const sort=$("publicSort")?.value||"new";
+  if(sort==="low")arr.sort((a,b)=>(+a.price||0)-(+b.price||0));
+  else if(sort==="high")arr.sort((a,b)=>(+b.price||0)-(+a.price||0));
+  else arr.sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
+  $("publicListings").innerHTML=arr.length?arr.slice(0,12).map(card).join(""):'<div class="empty">No matching approved listings yet. Register and post an offer or a request.</div>';
+}
+window.browse=(f)=>{activeFilter=f;$("market").scrollIntoView({behavior:"smooth"});renderPublic()};
+window.showApp=()=>{$("publicPage").classList.add("hidden");$("appPage").classList.remove("hidden");renderView("dashboard");};
+window.goHome=()=>{$("appPage").classList.add("hidden");$("publicPage").classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"});loadListings();};
+window.view=(v,el)=>{document.querySelectorAll(".sidebar button").forEach(b=>b.classList.remove("active"));if(el)el.classList.add("active");renderView(v)};
+async function renderView(v){if(!currentUser){toast("Please log in again.");return}let userSnap=await get(ref(db,"users/"+currentUser.id)),u=userSnap.val()||{};$("welcome").textContent="Hello, "+(u.name||currentUser.user_metadata?.display_name||"Student");if(v==="dashboard"){$("appContent").innerHTML=`<div class="stats"><div class="stat"><strong>${allListings.filter(x=>x.ownerId===currentUser.id).length}</strong><span>My active listings</span></div><div class="stat"><strong>${allListings.length}</strong><span>Campus listings</span></div><div class="stat"><strong>KSh 50</strong><span>One-time registration</span></div></div><div class="panel"><h2>Your campus, connected.</h2><p class="muted">Discover services, sell items and share learning materials with fellow students.</p><button class="btn" onclick="view('post')">＋ Create a listing</button></div><h2 style="margin-top:25px">Recently added</h2><div class="cards">${allListings.slice(0,6).map(card).join("")||'<div class="empty">No listings yet.</div>'}</div>`}
+else if(["services","products","notes"].includes(v)){let type=v==="services"?"service":v==="products"?"product":"note";let arr=allListings.filter(x=>x.type===type);$("appContent").innerHTML=`<div class="section-head"><div><h2>${v==="services"?"Find Services":v==="products"?"Secondhand Marketplace":"Academic Notes"}</h2><p class="muted">Browse approved posts from the Rongo student community.</p></div><button class="btn small" onclick="view('post')">＋ Post</button></div><div class="toolbar"><input id="searchListings" placeholder="Search title, course, category or location…" oninput="filterCards('${type}')"><select id="sortListings" onchange="filterCards('${type}')"><option value="new">Newest first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div><div id="listingResults" class="cards">${arr.map(card).join("")||'<div class="empty">Nothing posted here yet.</div>'}</div>`}
+else if(v==="post"){$("appContent").innerHTML=`<div class="panel"><h2>Create a campus post</h2><p class="muted">Offer a service, sell an item, share notes, or tell students what you need. Approved posts appear in the public overview.</p><form id="listingForm"><div class="field"><label>Listing type</label><select name="type" required><option value="service">Offer a service</option><option value="product">Sell a secondhand item</option><option value="note">Share academic notes / resource</option><option value="request">Post what I need (request)</option></select></div><div class="field"><label>Title</label><input name="title" required maxlength="100" placeholder="e.g. Laundry and ironing service"></div><div class="field"><label>Category</label><select name="category"><option>Laundry & Washing</option><option>Assignment Assistance / Tutoring</option><option>Graphic Design</option><option>Printing & Photocopying</option><option>Computer Services</option><option>Beauty & Hair</option><option>Photography</option><option>Cleaning</option><option>Transport</option><option>Food & Catering</option><option>Phones & Electronics</option><option>Clothes & Shoes</option><option>Books</option><option>Furniture</option><option>Academic Notes</option><option>Other</option></select></div><div class="field"><label>Description</label><textarea name="description" rows="4" required maxlength="1500"></textarea></div><div class="field"><label>Price / budget (KSh; enter 0 if free or negotiable)</label><input name="price" type="number" min="0" value="0"></div><div class="field"><label>Location around campus</label><input name="location" required placeholder="e.g. Rongo town, hostel name"></div><div class="field"><label>Contact phone / WhatsApp (Kenyan number)</label><input name="phone" required placeholder="07XXXXXXXX or +2547XXXXXXXX"></div><div class="field"><label>Photo or PDF document (max 8 MB)</label><input name="file" type="file" accept="image/*,.pdf"></div><button class="btn">Submit listing for review</button></form></div>`}
+else if(v==="mine"){let allSnap=await get(ref(db,"listings"));let mine=allSnap.exists()?Object.entries(allSnap.val()).map(([id,x])=>({id,...x})).filter(x=>x.ownerId===currentUser.id&&x.status!=="deleted").sort((a,b)=>(b.createdAt||0)-(a.createdAt||0)):[];const mineCards=mine.map(x=>'<article class="listing"><img src="'+esc(x.imageUrl||"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80")+'"><div class="listing-body"><span class="tag">'+esc(x.status||"pending")+'</span><h3>'+esc(x.title||"")+'</h3><button class="btn alt small" onclick="deleteListing(\''+x.id+'\')">Delete listing</button></div></article>').join("");$("appContent").innerHTML='<h2>My listings</h2><p class="muted">Your offers and requests, including posts waiting for approval.</p><div class="cards">'+(mineCards||'<div class="empty">You have not posted anything yet.</div>')+'</div>'}
+else if(v==="profile"){$("appContent").innerHTML=`<div class="panel"><h2>My profile</h2><div class="profileline"><div class="avatar">👤</div><div><b>${esc(u.name||"")}</b><div class="muted">${esc(u.email||"")}</div><div class="muted">${esc(u.phone||"")}</div></div></div><p><b>Hostel:</b> ${esc(u.hostel||"—")}</p><p><b>Room number:</b> ${esc(u.room||"—")}</p><p><b>Course:</b> ${esc(u.course||"—")}</p><p><b>Year:</b> ${esc(u.year||"—")}</p><p><b>Phone:</b> ${esc(u.phone||"—")}</p><p class="muted">To update your contact details, contact the platform administrator.</p></div>`}
+else if(v==="payments"){$("appContent").innerHTML=`<div class="panel"><h2>Payment history</h2><p class="muted">Payments are recorded only after the Supabase server function verifies the transaction directly with Paystack.</p><div id="myPayments">Loading payments…</div></div>`;let s=await get(ref(db,"payments/"+currentUser.id));let a=s.exists()?Object.values(s.val()):[];$("myPayments").innerHTML=a.length?a.map(p=>`<p>${esc(p.type)} · KSh ${esc(p.amount)} · ${esc(p.status)}</p>`).join(""):"No payments recorded."}
+}
+window.filterCards=(type)=>{let q=$("searchListings").value.toLowerCase(),sort=$("sortListings").value,a=allListings.filter(x=>x.type===type&&(x.title+" "+x.description+" "+x.category+" "+x.location).toLowerCase().includes(q));if(sort==="low")a.sort((x,y)=>(+x.price||0)-(+y.price||0));if(sort==="high")a.sort((x,y)=>(+y.price||0)-(+x.price||0));$("listingResults").innerHTML=a.map(card).join("")||'<div class="empty">No matching campus posts.</div>'};
+async function saveListing(form){
+  try{
+    if(!currentUser)throw Error("Please log in first.");
+    const userSnap=await get(ref(db,"users/"+currentUser.id));
+    const u=userSnap.val()||{};
+    if(u.status!=="active")throw Error("Complete the KSh 50 registration payment before posting.");
+    const f=new FormData(form),file=f.get("file");
+    let imageUrl="",attachmentUrl="",attachmentName="";
+    if(file&&file.size){
+      if(file.size>8*1024*1024)throw Error("File must be 8 MB or smaller.");
+      attachmentName=file.name;
+      const safeName=file.name.replace(/[^a-zA-Z0-9._-]/g,"_");
+      const fileRef=storageRef(storage,`${currentUser.id}/listingUploads/${Date.now()}_${safeName}`);
+      const uploaded=await uploadBytes(fileRef,file,{contentType:file.type||"application/octet-stream"});
+      attachmentUrl=await getDownloadURL(uploaded.ref);
+      if(file.type.startsWith("image/"))imageUrl=attachmentUrl;
+    }
+    const data=Object.fromEntries(f);delete data.file;
+    const phone=data.phone;delete data.phone;
+    const record={
+      ...data,price:Number(data.price)||0,imageUrl,attachmentUrl,attachmentName,
+      ownerId:currentUser.id,ownerName:u.name||"Student",createdAt:Date.now(),status:"pending"
+    };
+    const listingRef=push(ref(db,"listings"));
+    await set(listingRef,record);
+    await set(ref(db,"privateContacts/"+listingRef.key),{phone,ownerId:currentUser.id});
+    toast("Your post has been submitted for review. It will appear in the overview after approval.");
+    view("mine");
+  }catch(e){console.error(e);toast("Could not post: "+e.message)}
+}
+
+window.deleteListing=async id=>{if(!confirm("Delete this listing?"))return;let s=await get(ref(db,"listings/"+id));if(s.exists()&&s.val().ownerId===currentUser.id){await update(ref(db,"listings/"+id),{status:"deleted"});await loadListings();view("mine")}};
+window.contactSeller=async(id,channel)=>{if(!currentUser){openLogin();return}let user=await get(ref(db,"users/"+currentUser.id));if(!user.exists()||user.val().status!=="active"){toast("Create your student account first.");return}try{let unlocked=await get(ref(db,"contactUnlocks/"+currentUser.id+"/"+id));if(unlocked.exists()){let c=await get(ref(db,"privateContacts/"+id));if(c.exists()){openContact(c.val().phone,channel);return}}}catch(e){}pendingAction={id,channel};modal(`<h2>Connect directly with this student</h2><p class="muted">Unlock this seller's contact details.</p><div class="panel"><div style="font-size:30px;font-weight:800;color:#0b9b69">KSh 10</div><b>One-time contact unlock</b><p class="muted">One payment unlocks Call and WhatsApp for this listing.</p></div><div class="modal-actions"><button class="btn alt" onclick="closeModal()">Cancel</button><button class="btn" id="payContact">Pay KSh 10 & Continue</button></div>`);$("payContact").onclick=()=>startPayment("contact",10,{listingId:id,channel})};
+function openContact(phone,channel){closeModal();let p=String(phone||"").replace(/\D/g,"");if(p.startsWith("0"))p="254"+p;if(p.startsWith("7")||p.startsWith("1"))p="254"+p;if(channel==="whatsapp")window.open("https://wa.me/"+p,"_blank");else location.href="tel:+"+p}
+window.openContact=openContact;
+loadListings();
+</script>
+</body></html>
