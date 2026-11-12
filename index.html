@@ -36,6 +36,43 @@
 <section class="section" id="notes"><div class="section-head"><div><h2>Learn and share together</h2><div class="muted">Discover course notes, revision guides and learning resources.</div></div></div><div class="features"><article class="feature"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80"><div><h3>Study resources</h3><p class="muted">Find helpful notes and revision materials shared by students.</p></div></article><article class="feature"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'"><div><h3>Peer learning</h3><p class="muted">Connect with classmates and support one another.</p></div></article><article class="feature"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"><div><h3>Student enterprise</h3><p class="muted">Turn your skills and creativity into opportunities.</p></div></article></div></section>
 <section class="section"><div class="panel" style="background:linear-gradient(120deg,#10294b,#2459a5);color:white;padding:28px"><h2 style="color:white">Ready to connect?</h2><p style="color:#dbe8ff">Register once for KSh 50, then log in from your devices to discover and share campus opportunities.</p><button class="btn" style="background:white;color:#17345d" onclick="openRegister()">Register now</button></div></section>
 </div><footer class="footer"><div class="footer-inner"><div><b>RONGO UNIVERSITY CONNECT HUB</b><p>Connect. Share. Offer Services. Earn.</p></div><div>Student-powered marketplace · Kenya<br><small>Use the platform responsibly and respect other students.</small></div></div></footer>
+
+<section id="about-rongo-connect">
+  <h2>Student Services and Marketplace at Rongo University</h2>
+
+  <p>
+    Rongo University Connect Hub is a student community
+    platform in Rongo, Kenya. It helps students discover
+    campus services, academic support, digital services,
+    secondhand products and opportunities.
+  </p>
+
+  <h3>Find Student Services in Rongo</h3>
+  <p>
+    Discover laundry services, printing, graphic design,
+    technology services and other opportunities offered
+    by students around Rongo University.
+  </p>
+
+  <h3>Buy and Sell Secondhand Items</h3>
+  <p>
+    Explore affordable secondhand products and connect
+    with other students through the Rongo student
+    marketplace.
+  </p>
+
+  <h3>Academic Notes and Student Support</h3>
+  <p>
+    Find academic notes, revision resources and peer
+    learning opportunities to support university studies.
+  </p>
+
+  <p>
+    Join Rongo University Connect Hub and connect with
+    the student community in Rongo, Migori County, Kenya.
+  </p>
+</section>
+
 </main>
 <main id="appPage" class="app hidden"><div class="apphead"><div><div class="eyebrow" style="color:#2463eb">STUDENT SPACE</div><h2 style="margin:5px 0" id="welcome">Dashboard</h2></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn alt small" onclick="goHome()">⌂ Home</button><button class="btn alt small" onclick="view('dashboard')">Dashboard</button><button class="btn small" onclick="logout()">Logout</button></div></div><div class="appgrid"><aside class="sidebar" id="sidebar"><button onclick="goHome()">⌂ Home</button><button class="active" data-view="dashboard" onclick="view('dashboard',this)">▦ Dashboard</button><button data-view="services" onclick="view('services',this)">✦ Find Services</button><button data-view="products" onclick="view('products',this)">◇ Secondhand Items</button><button data-view="notes" onclick="view('notes',this)">▤ Academic Notes</button><button data-view="post" onclick="view('post',this)">＋ Post / Request</button><button data-view="mine" onclick="view('mine',this)">▣ My Listings</button><button data-view="profile" onclick="view('profile',this)">◎ My Profile</button><button data-view="payments" onclick="view('payments',this)">◷ Payments</button></aside><section class="content" id="appContent"></section></div></main>
 <div id="modal" class="modal hidden" onclick="if(event.target===this)closeModal()"><div class="modalbox" id="modalBox"></div></div><div id="toast" class="toast hidden"></div>
